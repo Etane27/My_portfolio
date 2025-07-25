@@ -1,11 +1,11 @@
-#Portfolio - Etane Babela
+# Portfolio - Etane Babela
 
 Bienvenue sur mon portfolio personnel
 Ce projet a été réalisé dans le but de présenter mes compétences, mes projets et mon profil en tant que futur développeur.
 
 ---
 
-##Objectifs
+## Objectifs
 
 - Mettre en valeur mes projets développés en Python & JS
 - Me familiariser avec HTML/CSS/JS vanilla
@@ -23,7 +23,7 @@ Ce projet a été réalisé dans le but de présenter mes compétences, mes proj
 
 ---
 
-##Aperçu
+## Aperçu
 
 [Voir le portfolio en ligne](https://etane27.github.io/My_portfolio/)
 
