@@ -1,0 +1,513 @@
+/* Déclaration des variables globales pour les couleurs du thème */
+:root {
+  --accent-color: #58A6FF; /* Couleur principale utilisée pour les liens, les icônes, les accents */
+  --text-color: #E6EDF3;   /* Couleur principale du texte */
+  --background-color: #0D1117; /* Couleur de fond globale */
+}
+
+/* Active un défilement fluide lors des ancres */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Style global du corps du document */
+body {
+  font-family: "Poppins", sans-serif; /* Police élégante et moderne */
+  color: var(--text-color); /* Texte par défaut */
+  background-color: #0d111c; /* Fond uniforme avec la navbar */
+}
+
+/* Liens par défaut */
+a {
+  color: var(--accent-color); /* Liens en bleu clair */
+}
+
+/* Barre de navigation principale */
+.navs {
+  display: flex;
+  justify-content: space-between; /* Espace entre le logo et les liens */
+  align-items: center;
+  padding: 1rem;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne discrète en bas */
+  background-color: #0d111c; /* Même couleur que le body */
+  box-shadow: none;
+}
+
+/* Liste des éléments de navigation */
+.navs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem; /* Espacement entre les liens */
+}
+
+/* Elément individuel dans la navbar */
+.navs li {
+  display: flex;
+  border: none;
+}
+
+/* Style des liens */
+.navs a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  border: none;
+  box-shadow: none;
+}
+
+/* Hover sur un lien */
+.navs a:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Focus clavier : supprime les bordures moches */
+.navs a:focus {
+  outline: none;
+}
+
+/* Supprime les pseudo-éléments s’ils sont générés */
+.navs a::before,
+.navs a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Logo rond avec effet lumineux */
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px #58A6FF;
+}
+
+/* Section d’accueil */
+.Accueil {
+  padding-top: 80px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.intro {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.nom {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.identity {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.little_bio {
+  max-width: 600px;
+  line-height: 1.6;
+  color: #A9B1BA;
+  padding-bottom: 40px;
+}
+
+/* Section À propos */
+.About {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: none;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+}
+
+.About h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.About article {
+  margin-bottom: 2.5rem;
+}
+
+.About h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.About p {
+  line-height: 1.6;
+  color: #c0c0c0;
+  font-size: 1rem;
+}
+
+/* Ligne de séparation stylée */
+.separator {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+  margin: 2rem auto;
+  width: 70%;
+  opacity: 0.2;
+}
+
+/* Section Compétences */
+.Compétences {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.Compétences h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+/* Wrapper des compétences (layout général) */
+.skills-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Colonne des catégories à gauche */
+.skills-catégory {
+  flex: 1;
+  min-width: 180px;
+}
+
+.skills-catégory ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills-catégory li {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--accent-color);
+  transition: 0.3s;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+/* Catégorie sélectionnée */
+.skills-catégory li.active {
+  background-color: var(--accent-color);
+  color: black;
+  font-weight: bold;
+}
+
+.skills-catégory li:hover {
+  background-color: rgba(88, 166, 255, 0.2);
+}
+
+/* Contenu des compétences (grille de logos + noms) */
+.skills-content {
+  flex: 3;
+}
+
+.skills-content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+
+.skills-content li {
+  text-align: center;
+  color: #c0c0c0;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skills-content img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Masque les contenus des catégories inactives */
+.tab-content {
+  display: none;
+}
+
+/* Affiche la catégorie active */
+.tab-content.active {
+  display: block;
+}
+
+/* Section Projets */
+.Projets {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Titre de section */
+.Projets h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+/* Grille responsive des projets */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Carte de projet individuelle */
+.project-card {
+  background-color: #11151c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Effet au survol */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+}
+
+/* Image d’aperçu */
+.project-card img:first-of-type {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+/* Titre du projet */
+.project-card h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Description du projet */
+.project-card p {
+  font-size: 1rem;
+  color: #c0c0c0;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Logo GitHub + lien */
+.project-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+};
+
+.project-card a:hover {
+  color: white;
+};
+
+.project-card a img {
+  width: 18px;
+  height: 18px;
+  object-fit: cover; 
+  object-position: center;
+  overflow: hidden;
+  border-radius: 2px; 
+  filter: brightness(0) invert(1);
+}
+
+
+
+
+.Contact {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  color: #c0c0c0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.5);
+}
+
+.burger {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .navs ol {
+    display: none;
+    flex-direction: column;
+    background-color: #0d111c;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 15;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navs ol.active {
+    display: flex;
+  }
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skills-content li:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3), 
+              0 0 20px rgba(88, 166, 255, 0.2);
+}
+
+.skills-content img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-content li:hover span {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+.skills-content span {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-content li img {
+  transition: transform 0.3s ease;
+}
+
+.skills-content li:hover img {
+  transform: scale(1.1);
+  
+  box-shadow: 0 0 8px rgba(88, 166, 255, 0.1);
+}
+

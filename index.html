@@ -5,26 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etane Babela portfolio</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css"> <!-- ajout du lien CSS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"> <!--ajout de la police d'écriture poppins-->
+
+  <link rel="icon" href="assets/icon.png" type="image/png">
 </head>
 
 <body>
   <nav class="navs">
-    <ol>
-      <li class="navs"> <a href="#About">Accueil</a></li>
-      <li class="navs"><a href="#">À propos de Moi</a></li>
-      <li class="navs"><a href="#">Compétences</a></li>
-      <li class="navs"><a href="#">Projets</a></li>
+    <div class="logo">
+      <img src="assets/icon.png" alt="avatar de ETANE (moi)">
+    </div>
+    <ol id="nav-links">
+      <li><a href="#Accueil">Accueil</a></li>
+      <li><a href="#About">À propos de Moi</a></li>
+      <li><a href="#Compétences">Compétences</a></li>
+      <li><a href="#Projets">Projets</a></li>
+      <li><a href="#Contact">Contact</a></li>
     </ol>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </nav>
-  <section class="Accueil">
+  <section class="Accueil" id="Accueil">
     <span class="intro">Bonjour, je suis</span>
     <h1 class="nom">Etane Babela</h1>
     <h2 class="identity">Futur étudiant à EPITA</h2>
     <p class="litte_bio">Je suis passionné d'informatique et je développe plein de choses pendant mon temps libre.</p>
   </section>
+  <hr class="separator">
 
 
-  <section class="About">
+  <section class="About" id="About">
     <h2>À propos de Moi</h2>
     <article>
       <h3>Qui suis-je?</h3>
@@ -32,14 +53,16 @@
         univers dans lequel je m'épanouis beaucoup...</p>
     </article>
     <article>
-      <p>dès mon ce2 j'étais déjà très à l'aise sur un ordinateur , mais c'est en 2020 (5ème) pendant le confinement que
+      <p>dès mon CE2 j'étais déjà très à l'aise sur un ordinateur , mais c'est en 2020 (5ème) pendant le confinement
+        que
         j'ai
         commencé à regarder les vidéos de <a target="_blank" href="https://www.youtube.com/@Micode"
           rel="noopener">Micode</a> et je me
         suis rendu compte
         que
         c'était vraiment dans ce domaine que je voulais Travailler. j'ai donc postulé à <a target="_blank"
-          href="https://www.epita.fr/" rel="noopener">EPITA</a> pendant mon année de Terminale et commencera ma rentrée
+          href="https://www.epita.fr/" rel="noopener">EPITA</a> pendant mon année de Terminale et commencera ma
+        rentrée
         en
         Septembre 2025
       </p>
@@ -51,37 +74,81 @@
   </section>
 
 
+  <hr class="separator">
 
-  <section class="Compétences">
+  <section class="Compétences" id="Compétences">
     <h2>Mes Compétences</h2>
+    <div class="skills-wrapper">
 
-    <div class="skills-catégory">
-      <ul>
-        <li class="active" data-tab="web">Web</li>
-        <li data-tab="prog">Programmation</li>
-        <li data-tab="outils">Outils</li>
-      </ul>
+      <div class="skills-catégory">
+        <ul>
+          <li class="active" data-tab="web">Web</li>
+          <li data-tab="prog">Programmation</li>
+          <li data-tab="outils">Outils</li>
+        </ul>
+      </div>
+
+      <div class="skills-content">
+        <div id="web" class="tab-content active">
+          <ul>
+            <li><img src="assets/html.svg"><span>HTML</span></li>
+            <li><img src="assets/css.svg"><span>CSS</span></li>
+            <li><img src="assets/JavaScript.svg"><span>JavaScript</span></li>
+          </ul>
+        </div>
+        <div id="prog" class="tab-content">
+          <ul>
+            <li><img src="assets/python.svg"><span>Python</span></li>
+          </ul>
+        </div>
+        <div id="outils" class="tab-content">
+          <ul>
+            <li><img src="assets/git.svg"><span>Git</span></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div class="skills-content">
-      <div id="web" class="tab-content active">
-        <ul>
-          <li><img src="#"> HTML</li>
-          <li><img src="#"> CSS</li>
-        </ul>
-      </div>
-      <div id="prog" class="tab-content">
-        <ul>
-          <li><img src="#"> Python</li>
-        </ul>
-      </div>
-      <div id="outils" class="tab-content">
-        <ul>
-          <li><img src="#"> Git</li>
-        </ul>
+  <section class="Projets" id="Projets">
+    <h2>Mes Projets</h2>
+    
+      
+
+      <div class="project-grid"></div>
+      
+  </section>
+
+  <section class="Contact" id="Contact">
+    <h2>Contact</h2>
+    <p class="contact-intro">
+      Une question ? Une opportunité ? Un petit coucou ?<br>
+      Je suis toujours ouvert aux échanges !
+    </p>
+
+    <div class="contact-info">
+      <p>📧 <a href="mailto:etane.babela@gmail.com">etane.babel@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://github.com/Etane27" target="_blank" rel="noopener">
+          <img src="assets/github-mark.svg" alt="GitHub">
+        </a>
+
       </div>
     </div>
   </section>
+
+  <footer class="Footer">
+    <p>&copy; 2025 Etane Babela. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="#Accueil">Haut de page</a>
+      <a href="https://github.com/Etane27" target="_blank">GitHub</a>
+      <a href="mailto:etane@example.com">Me contacter</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
