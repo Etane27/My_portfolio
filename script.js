@@ -31,25 +31,25 @@ categories.forEach(category => {
 const projets = [
   {
     titre:"Le juste prix",
-    description:"Mon tout premier Projet. un simple Juste prix basé sur la bibliothèque Random, ce suis à ce jour toujours très fier de ce projet.",
+    description:"Mon tout premier Projet. Un simple Juste prix basé sur la bibliothèque Random, Je suis à ce jour toujours très fier de ce projet.",
     lien:"https://github.com/Etane27/Just-prix",
     image: "assets/juste_prix.jpg"
   },
   {
     titre:"Le Jeu du Pendu",
-    description:"La premiere fois que je me servais d'une Interface Graphique (Tkinter) je me suis beaucoup amusé sur ce projet Scolaire",
+    description:" C'était La premiere fois que je me servais d'une Interface Graphique(Tkinter). Je me suis beaucoup amusé sur ce projet Scolaire",
     lien:"https://github.com/Etane27/Hangman",
     image:"assets/pendu.png",
   },
   {
     titre:"Bot Review",
-    description:"L'un de mes projets les plus ambitieux. un bot discord permettant de créer un embed pour recommander un jeu. j'utilise dans ce projet l'API RAWG et la bibliotheque Discord PY",
+    description:"L'un de mes projets les plus ambitieux. un bot discord permettant de créer un Embed pour recommander un jeu. j'utilise dans ce projet l'API RAWG et la bibliotheque Discord PY",
     lien:"https://github.com/Etane27/Review_BOT",
     image:"assets/JV.png"
   },
   {
     titre:"Portfolio",
-    description:"vous êtes actuellement sur ce projet, cela a permis d'ameliorer ma comphrénsion du JS et du CSS",
+    description:"vous êtes actuellement sur ce projet, cela a permis d'ameliorer ma compréhension du JS et du CSS",
     lien :"#",
     image:"assets/icon.png"
   }
@@ -96,3 +96,14 @@ projets.forEach((projet) => {
   container.append(card);
 });
 
+document.getElementById("copy-discord").addEventListener("click", () => {
+  const pseudoDiscord = "Etane_"; 
+
+  navigator.clipboard.writeText(pseudoDiscord)
+    .then(() => {
+      alert("Pseudo Discord copié !");
+    })
+    .catch(err => {
+      console.error("Erreur lors de la copie :", err);
+    });
+});
