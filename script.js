@@ -96,14 +96,11 @@ projets.forEach((projet) => {
   container.append(card);
 });
 
-document.getElementById("copy-discord").addEventListener("click", () => {
-  const pseudoDiscord = "Etane_"; 
-
-  navigator.clipboard.writeText(pseudoDiscord)
-    .then(() => {
-      alert("Pseudo Discord copié !");
-    })
-    .catch(err => {
-      console.error("Erreur lors de la copie :", err);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("copy-discord").addEventListener("click", () => {
+    const pseudoDiscord = "Etane_";
+    navigator.clipboard.writeText(pseudoDiscord)
+      .then(() => alert("Pseudo Discord copié !"))
+      .catch(err => console.error("Erreur :", err));
+  });
 });
