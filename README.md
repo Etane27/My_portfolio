@@ -16,8 +16,8 @@ Ce projet a été réalisé dans le but de présenter mes compétences, mes proj
 
 ## 🔧 Tech utilisées
 
-- **HTML5** – Structure propre et sémantique
-- **CSS3** – Responsive Design, animations légères, thème sombre
+- **HTML5** – Structure
+- **CSS3** – animations légères, thème sombre
 - **JavaScript Vanilla** – Manipulation du DOM, affichage dynamique
 - **GitHub Pages** – Hébergement gratuit et simple
 
