@@ -62,7 +62,7 @@ My_portfolio/
 
 ### Remerciements
 
-Ce projet m’a permis de progresser énormément. Merci à ceux qui m’ont soutenu, à la doc MDN, et à ChatGPT pour l’assistance technique tout en me laissant coder moi-même.
+Ce projet m’a permis de progresser énormément. Merci à ceux qui m’ont soutenu, à la doc MDN, et à ChatGPT (assistant couleurs et dispostion) pour l’assistance technique tout en me laissant coder moi-même.
 **
 
 ---
